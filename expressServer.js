@@ -35,7 +35,6 @@ app.get('/pets/:id', (req, res) => {
       return res.sendStatus(404);
     }
 
-    res.set('Content-Type', 'text/plain');
     res.send(pets[id]);
   });
 });
@@ -47,3 +46,5 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+module.exports = app;
